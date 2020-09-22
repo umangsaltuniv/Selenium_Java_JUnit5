@@ -8,10 +8,10 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-class SeleniumTest {
+public class SeleniumTest {
 
 	@Test
-	void test() {
+	public void test01() {
 		String driverPath = System.getProperty("user.dir")
 							+ File.separator
 							+ "drivers"
