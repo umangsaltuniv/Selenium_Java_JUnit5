@@ -2,25 +2,16 @@ package maven.selenium;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import java.io.File;
-
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
 public class SeleniumTest {
 
 	@Test
 	public void test01() {
-		String driverPath = System.getProperty("user.dir")
-							+ File.separator
-							+ "drivers"
-							+ File.separator
-							+ "chromedriver.exe";
-		
-		System.setProperty("webdriver.chrome.driver", driverPath);
-		
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver;
+		driver = new HtmlUnitDriver();
 		driver.get("https://www.google.com");
 		
 		String expectedTitle = "Google";
